@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>22/12 – Ngày thành lập Quân đội nhân dân Việt Nam</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c0405;--wine:#2a070b;--crimson:#b5121b;--gold:#e8c15a;--gold2:#f7e3a1;--ivory:#f6ecd6;--mute:#b9a58a;
+--serif:'Playfair Display',Georgia,'Times New Roman',serif;--sans:'Be Vietnam Pro',system-ui,Arial,sans-serif;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--ink);color:var(--ivory);font-family:var(--sans);line-height:1.7;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--ink);z-index:60}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:var(--gold);z-index:61}
+svg{display:block}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:70px 24px 90px;overflow:hidden;
+background:radial-gradient(120% 80% at 50% 38%,#8f0f17 0,#4a0a10 45%,var(--ink) 85%)}
+.hero .art{position:absolute;left:50%;top:44%;width:min(150vw,900px);aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
+.art g.turn{transform-origin:0 0;animation:turn 120s linear infinite}
+@keyframes turn{to{transform:rotate(360deg)}}
+.art polygon{fill:none;stroke:var(--gold);stroke-width:.35;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.2s cubic-bezier(.6,0,.2,1) forwards}
+.art polygon:nth-child(2){animation-delay:.4s;stroke-opacity:.7}.art polygon:nth-child(3){animation-delay:.8s;stroke-opacity:.5}
+.art polygon:nth-child(4){animation-delay:1.2s;stroke-opacity:.35}.art polygon:nth-child(5){animation-delay:1.6s;stroke-opacity:.2}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero>*:not(.art){position:relative;z-index:2}
+.kick{color:var(--gold2);font-size:14px;letter-spacing:.18em;text-transform:uppercase;opacity:0;animation:fade 1s 1.2s forwards}
+@keyframes fade{to{opacity:1}}
+.date{font-family:var(--serif);font-weight:900;font-size:clamp(96px,30vw,250px);line-height:1;margin:6px 0 4px;white-space:nowrap;
+background:linear-gradient(110deg,#b8892a 15%,#fff3c4 40%,var(--gold) 55%,#b8892a 80%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+animation:shine 5s 2s linear infinite,up 1.4s .5s cubic-bezier(.2,.9,.2,1) both;filter:drop-shadow(0 10px 30px rgba(0,0,0,.45))}
+@keyframes shine{to{background-position:-260% 0}}
+@keyframes up{from{opacity:0;transform:translateY(40px)}}
+.ttl{font-family:var(--serif);font-weight:700;font-size:clamp(22px,5vw,38px);line-height:1.25}
+.ttl span{display:block;overflow:hidden;padding-bottom:.12em}
+.ttl i{display:block;font-style:normal;transform:translateY(110%);animation:mask 1s cubic-bezier(.2,.9,.2,1) forwards}
+.ttl span:nth-child(1) i{animation-delay:1.1s}.ttl span:nth-child(2) i{animation-delay:1.3s}
+@keyframes mask{to{transform:none}}
+.sub{margin-top:18px;color:var(--mute);max-width:30ch;opacity:0;animation:fade 1s 1.8s forwards}
+.cd{margin-top:26px;display:inline-flex;gap:10px;align-items:baseline;padding:10px 20px;border:1px solid rgba(232,193,90,.5);border-radius:999px;font-size:14px;opacity:0;animation:fade 1s 2.1s forwards}
+.cd b{font-family:var(--serif);font-size:24px;color:var(--gold)}
+.cue{position:absolute;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));width:1px;height:46px;background:linear-gradient(var(--gold),transparent);transform-origin:top;animation:cue 2s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* STORY */
+.story{padding:110px 0 70px}
+.story p{font-family:var(--serif);font-weight:700;font-size:clamp(26px,6.4vw,48px);line-height:1.35}
+.w{color:rgba(246,236,214,.5);transition:color .35s}.w.on{color:var(--ivory)}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.2,.9,.2,1)}.rv.in{opacity:1;transform:none}
+
+/* NUMBERS */
+.nums{padding:30px 0 90px}
+.nums .row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(232,193,90,.4)}
+.nums .row div{padding:26px 8px 0;text-align:center}
+.nums .row div+div{border-left:1px solid rgba(232,193,90,.25)}
+.nums b{display:block;font-family:var(--serif);font-weight:900;font-size:clamp(40px,11vw,86px);line-height:1;color:var(--gold)}
+.nums span{display:block;margin-top:8px;font-size:13px;color:var(--mute)}
+
+/* TIMELINE */
+.tlh{padding:0 24px;max-width:900px;margin:0 auto 24px}
+.eyebrow{color:var(--gold);font-size:14px;letter-spacing:.16em;text-transform:uppercase}
+h2{font-family:var(--serif);font-weight:900;font-size:clamp(34px,8vw,60px);line-height:1.1;margin-top:6px}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 12vw 30px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(74vw,340px);scroll-snap-align:center;min-height:360px;padding:26px 22px;border-radius:22px;position:relative;overflow:hidden;
+border:1px solid rgba(232,193,90,.35);background:linear-gradient(165deg,rgba(181,18,27,.55),rgba(42,7,11,.9) 70%);
+transform:scale(var(--s,.92));opacity:var(--o,.55);transition:transform .15s linear,opacity .15s linear}
+.card::after{content:"";position:absolute;right:-40px;bottom:-40px;width:170px;height:170px;opacity:.1;background:var(--gold);
+clip-path:polygon(50% 0,61% 33%,98% 35%,68% 57%,79% 91%,50% 71%,21% 91%,32% 57%,2% 35%,39% 33%)}
+.card .yr{font-family:var(--serif);font-weight:900;font-size:clamp(50px,15vw,70px);line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--gold)}
+.card h3{font-family:var(--serif);font-size:22px;line-height:1.3;margin:18px 0 10px}
+.card p{color:#e6d6b8;font-size:15px}
+.nav{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:4px}
+.dots{display:flex;gap:8px}.dots i{width:7px;height:7px;border-radius:50%;background:rgba(232,193,90,.3);transition:.3s}.dots i.on{width:24px;border-radius:4px;background:var(--gold)}
+.nav button{width:40px;height:40px;border-radius:50%;border:1px solid var(--gold);background:none;color:var(--gold);font-size:18px;cursor:pointer}
+.nav button:focus-visible,.go:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* QUOTE */
+.quote{position:relative;padding:120px 24px;text-align:center;overflow:hidden;margin-top:70px;background:linear-gradient(var(--ink),var(--wine) 50%,var(--ink))}
+.quote svg{position:absolute;left:50%;top:50%;width:min(130vw,700px);transform:translate(-50%,-50%);opacity:.5;animation:turn2 90s linear infinite}
+@keyframes turn2{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.quote polygon{fill:none;stroke:var(--gold);stroke-width:.3;opacity:.55}
+.quote q{position:relative;display:block;max-width:15ch;margin:0 auto;font-family:var(--serif);font-weight:900;font-size:clamp(34px,9vw,64px);line-height:1.2;quotes:none;color:var(--gold2)}
+
+/* TRI AN */
+.tri{padding:100px 0 80px;text-align:center}
+.tri p{color:var(--mute);max-width:34ch;margin:14px auto 0}
+.sky{position:relative;height:240px;margin:34px 0 0;border-radius:22px;overflow:hidden;border:1px solid rgba(232,193,90,.3);background:linear-gradient(#14070a,#3a0b10)}
+.lamp{position:absolute;bottom:-30px;width:14px;height:19px;border-radius:6px 6px 8px 8px;background:linear-gradient(#ffd36b,#ef6a1c);box-shadow:0 0 18px 6px rgba(255,160,50,.55);animation:float 7s cubic-bezier(.25,.8,.3,1) forwards,bob 3s 7s ease-in-out infinite alternate}
+@keyframes float{to{bottom:var(--y)}}
+@keyframes bob{to{transform:translateY(-8px)}}
+.go{margin-top:22px;font:inherit;font-weight:600;color:var(--ink);background:var(--gold);border:0;border-radius:999px;padding:15px 30px;cursor:pointer;transition:transform .15s,background .2s}
+.go:active{transform:scale(.95)}
+.cnt{margin-top:14px;font-size:14px;color:var(--mute)}.cnt b{font-family:var(--serif);color:var(--gold);font-size:22px}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:20px 24px calc(40px + env(safe-area-inset-bottom,0px))}
+
+/* NHẠC */
+#mu{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:70;width:54px;height:54px;border-radius:50%;border:1.5px solid var(--gold);
+background:rgba(12,4,5,.78);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:3px;cursor:pointer;padding:0;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+#mu::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--gold);opacity:0;animation:ring 2s ease-out infinite}
+#mu.on::before,#mu.used::before{animation:none}
+@keyframes ring{from{transform:scale(.85);opacity:.8}to{transform:scale(1.3);opacity:0}}
+#mu i{display:block;width:3px;height:6px;border-radius:2px;background:var(--gold);transform-origin:50% 100%}
+#mu.on i{animation:eq .9s ease-in-out infinite alternate}
+#mu.on i:nth-child(2){animation-delay:.2s}#mu.on i:nth-child(3){animation-delay:.4s}#mu.on i:nth-child(4){animation-delay:.1s}
+@keyframes eq{from{height:5px}to{height:22px}}
+#mu:focus-visible{outline:2px solid #fff;outline-offset:3px}
+#gate{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer;background:radial-gradient(120% 80% at 50% 38%,#8f0f17 0,#4a0a10 45%,#0c0405 85%);transition:opacity .6s}
+#gate.out{opacity:0;pointer-events:none}
+#gate b{display:block;font-family:var(--serif);font-weight:900;font-size:clamp(64px,22vw,160px);line-height:1;color:var(--gold)}
+#gate span{display:block;margin-top:14px;color:var(--gold2);font-size:14px;letter-spacing:.16em;text-transform:uppercase;animation:blink 1.8s ease-in-out infinite}
+@keyframes blink{50%{opacity:.35}}
+body.gate{overflow:hidden}
+body.gate .hero,body.gate .hero *{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}
+.art polygon{stroke-dashoffset:0}.ttl i,.kick,.sub,.cd{opacity:1;transform:none}.w{color:var(--ivory)}.rv{opacity:1;transform:none}.card{transform:none;opacity:1}.date{opacity:1}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header class="hero">
+  <svg class="art" viewBox="-60 -60 120 120" aria-hidden="true"><g class="turn">
+    <polygon pathLength="1" points="0,-48 11.3,-15.6 45.6,-14.8 18.3,5.9 28.2,38.8 0,19.2 -28.2,38.8 -18.3,5.9 -45.6,-14.8 -11.3,-15.6"/>
+    <polygon pathLength="1" transform="scale(.8)" points="0,-48 11.3,-15.6 45.6,-14.8 18.3,5.9 28.2,38.8 0,19.2 -28.2,38.8 -18.3,5.9 -45.6,-14.8 -11.3,-15.6"/>
+    <polygon pathLength="1" transform="scale(.6)" points="0,-48 11.3,-15.6 45.6,-14.8 18.3,5.9 28.2,38.8 0,19.2 -28.2,38.8 -18.3,5.9 -45.6,-14.8 -11.3,-15.6"/>
+    <polygon pathLength="1" transform="scale(1.2)" points="0,-48 11.3,-15.6 45.6,-14.8 18.3,5.9 28.2,38.8 0,19.2 -28.2,38.8 -18.3,5.9 -45.6,-14.8 -11.3,-15.6"/>
+    <polygon pathLength="1" transform="scale(1.45)" points="0,-48 11.3,-15.6 45.6,-14.8 18.3,5.9 28.2,38.8 0,19.2 -28.2,38.8 -18.3,5.9 -45.6,-14.8 -11.3,-15.6"/>
+  </g></svg>
+  <div class="kick">Kỷ niệm 82 năm</div>
+  <div class="date">22/12</div>
+  <h1 class="ttl"><span><i>Ngày thành lập</i></span><span><i>Quân đội nhân dân Việt Nam</i></span></h1>
+  <p class="sub">Vì nhân dân quên mình, vì nhân dân hy sinh</p>
+  <div class="cd" id="cd"></div>
+  <div class="cue" aria-hidden="true"></div>
+</header>
+
+<section class="story"><div class="wrap"><p id="story">Ngày 22 tháng 12 năm 1944, trong khu rừng Trần Hưng Đạo, Cao Bằng, 34 chiến sĩ đầu tiên làm lễ thành lập Đội Việt Nam Tuyên truyền Giải phóng quân do Võ Nguyên Giáp chỉ huy. Từ đội quân nhỏ ấy, quân đội ta lớn lên cùng cuộc đấu tranh giành độc lập của dân tộc.</p></div></section>
+
+<section class="nums"><div class="wrap"><div class="row rv">
+  <div><b data-to="34">0</b><span>chiến sĩ đầu tiên</span></div>
+  <div><b data-to="1944">0</b><span>năm thành lập</span></div>
+  <div><b data-to="82">0</b><span>năm truyền thống</span></div>
+</div></div></section>
+
+<section>
+  <div class="tlh rv"><div class="eyebrow">Hành trình</div><h2>Những dấu mốc</h2></div>
+  <div class="rail" id="rail">
+    <article class="card"><div class="yr">1944</div><h3>Thành lập đội quân đầu tiên</h3><p>22/12/1944, Đội Việt Nam Tuyên truyền Giải phóng quân ra đời ở Cao Bằng.</p></article>
+    <article class="card"><div class="yr">12.1944</div><h3>Hai trận thắng đầu tiên</h3><p>Ngày 25 và 26/12, chiến thắng Phai Khắt và Nà Ngần mở đầu truyền thống "đánh chắc thắng".</p></article>
+    <article class="card"><div class="yr">1945</div><h3>Việt Nam Giải phóng quân</h3><p>Các lực lượng vũ trang cách mạng hợp nhất trước thềm Cách mạng Tháng Tám.</p></article>
+    <article class="card"><div class="yr">1950</div><h3>Quân đội nhân dân Việt Nam</h3><p>Quân đội mang tên gọi như ngày nay.</p></article>
+    <article class="card"><div class="yr">1954</div><h3>Chiến thắng Điện Biên Phủ</h3><p>Ngày 7/5/1954, chiến thắng "lừng lẫy năm châu, chấn động địa cầu".</p></article>
+    <article class="card"><div class="yr">1975</div><h3>Thống nhất đất nước</h3><p>Ngày 30/4/1975, Chiến dịch Hồ Chí Minh toàn thắng, non sông thu về một mối.</p></article>
+  </div>
+  <div class="nav"><button id="pv" aria-label="Trước">‹</button><div class="dots" id="dots"></div><button id="nx" aria-label="Sau">›</button></div>
+</section>
+
+<div class="quote">
+  <svg viewBox="-60 -60 120 120" aria-hidden="true"><polygon points="0,-48 11.3,-15.6 45.6,-14.8 18.3,5.9 28.2,38.8 0,19.2 -28.2,38.8 -18.3,5.9 -45.6,-14.8 -11.3,-15.6"/><polygon transform="scale(.7)" points="0,-48 11.3,-15.6 45.6,-14.8 18.3,5.9 28.2,38.8 0,19.2 -28.2,38.8 -18.3,5.9 -45.6,-14.8 -11.3,-15.6"/></svg>
+  <q class="rv">Bộ đội Cụ Hồ, vì nhân dân phục vụ.</q>
+</div>
+
+<section class="tri"><div class="wrap">
+  <div class="eyebrow rv">Tri ân</div>
+  <h2 class="rv">Ngày hội quốc phòng toàn dân</h2>
+  <p class="rv">Từ năm 1989, 22/12 cũng là dịp cả nước tri ân những người lính, thương binh và gia đình liệt sĩ.</p>
+  <div class="sky" id="sky"></div>
+  <button class="go" id="go">Thả một ngọn đèn tri ân</button>
+  <div class="cnt"><b id="n">0</b> ngọn đèn đã được mọi người thả</div>
+</div></section>
+<footer>Tri ân những người đã hy sinh vì độc lập, tự do của Tổ quốc</footer>
+
+<button id="mu" aria-label="Bật nhạc nền" title="Bật/tắt nhạc"><i></i><i></i><i></i><i></i></button>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+/* đếm ngược */
+function cd(){var n=new Date(),y=n.getFullYear(),g=new Date(y,11,22);if(n>new Date(y,11,23))g=new Date(y+1,11,22);
+if(n.getMonth()===11&&n.getDate()===22){$('cd').textContent='Hôm nay là 22/12 – chúc mừng ngày truyền thống!';return}
+var d=Math.ceil((g-n)/864e5);$('cd').innerHTML='Còn <b>'+d+'</b> ngày đến 22/12'}
+cd();
+/* tách từ để sáng dần khi cuộn */
+var st=$('story'),ws=st.textContent.split(' ');st.innerHTML=ws.map(function(w){return '<span class="w">'+w+'</span>'}).join(' ');
+var W=st.querySelectorAll('.w');
+/* hiện dần + đếm số */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+e.target.querySelectorAll('[data-to]').forEach(function(b){var to=+b.dataset.to,s=performance.now();(function f(t){var p=Math.min((t-s)/1600,1);b.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)})})},{threshold:.25});
+document.querySelectorAll('.rv').forEach(function(x){io.observe(x)});
+/* timeline ngang */
+var rail=$('rail'),cards=[].slice.call(rail.children),dots=$('dots');
+cards.forEach(function(){dots.appendChild(document.createElement('i'))});
+function rl(){var c=rail.getBoundingClientRect(),mid=c.left+c.width/2,best=0,bd=1e9;
+cards.forEach(function(k,i){var r=k.getBoundingClientRect(),d=Math.abs(r.left+r.width/2-mid),t=Math.min(d/(c.width*.6),1);
+k.style.setProperty('--s',(1-.08*t).toFixed(3));k.style.setProperty('--o',(1-.45*t).toFixed(3));if(d<bd){bd=d;best=i}});
+[].forEach.call(dots.children,function(d,i){d.className=i===best?'on':''})}
+rail.addEventListener('scroll',rl,{passive:true});rl();
+function go(dir){var w=cards[0].offsetWidth+16;rail.scrollBy({left:dir*w,behavior:'smooth'})}
+$('pv').onclick=function(){go(-1)};$('nx').onclick=function(){go(1)};
+/* cuộn */
+var bar=$('bar'),sy=st.parentNode;
+function sc(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-innerHeight||1)*100)+'%';
+var r=st.getBoundingClientRect(),p=(innerHeight*.9-r.top)/(r.height+innerHeight*.35);p=Math.max(0,Math.min(1,p));
+var k=Math.round(p*W.length);for(var i=0;i<W.length;i++)W[i].classList.toggle('on',i<k)}
+addEventListener('scroll',sc,{passive:true});sc();
+/* đèn tri ân – số đếm chung cho mọi người (lưu trên máy chủ countapi.mileshilliard.com) */
+var sky=$('sky'),KEY='kroshxyz-ngay-22-12-den-tri-an',API='https://countapi.mileshilliard.com/api/v1/',total=0,busy=false,cs=document.createElement('div');
+cs.className='cnt';cs.style.fontSize='12px';$('n').parentNode.appendChild(cs);
+function lamp(){var l=document.createElement('div');l.className='lamp';
+l.style.left=(6+Math.random()*88)+'%';l.style.setProperty('--y',(10+Math.random()*68)+'%');l.style.animationDelay='0s,'+(Math.random()*2)+'s';
+sky.appendChild(l);if(sky.children.length>70)sky.removeChild(sky.firstChild)}
+function show(v){total=v;$('n').textContent=v.toLocaleString('vi-VN')}
+function call(op){return fetch(API+op+'/'+KEY).then(function(r){if(r.status===404)return 0;if(!r.ok)throw 0;return r.json()}).then(function(d){if(typeof d==='number')return d;var v=parseInt(d.value,10);if(isNaN(v))throw 0;return v})}
+function okc(){cs.textContent=''}
+function bad(){cs.textContent='Chưa kết nối được bộ đếm chung, số hiện tại có thể chưa đầy đủ.'}
+show(0);
+call('get').then(function(v){okc();show(v);for(var i=0;i<Math.min(v,40);i++)setTimeout(lamp,i*140)}).catch(bad);
+setInterval(function(){if(document.hidden)return;call('get').then(function(v){okc();if(v>total){var a=Math.min(v-total,12);for(var i=0;i<a;i++)setTimeout(lamp,i*300);show(v)}}).catch(function(){})},25000);
+$('go').onclick=function(){lamp();show(total+1);if(busy)return;busy=true;
+call('hit').then(function(v){okc();show(Math.max(v,total))}).catch(bad).then(function(){setTimeout(function(){busy=false},400)})};
+/* nhạc nền: hành khúc trang nghiêm, tự tổng hợp bằng JS thuần → phát bằng thẻ audio, dự phòng Web Audio */
+var SR=16000,au=new Audio(),PCM=null,ready=false,on=false,want=true,manual=false,sil='',mu=$('mu'),GE=['touchend','click','keydown','pointerup'],actx=null,wsrc=null,usingWA=false,tb=null,wae=null;
+au.loop=true;au.preload='auto';
+try{if(navigator.audioSession)navigator.audioSession.type='playback'}catch(e){}
+var gt=document.createElement('div');gt.id='gate';gt.innerHTML='<div><b>22/12</b><span>Chạm để bắt đầu</span></div>';document.body.appendChild(gt);document.body.classList.add('gate');
+function openGate(){if(!gt)return;document.body.classList.remove('gate');gt.classList.add('out');var x=gt;gt=null;setTimeout(function(){x.remove()},700)}
+function makeLoop(SR,done){
+var BPM=112,B=60/BPM,BARS=8,LS=Math.round(BARS*4*B*SR),TS=SR*3,TWO=2*Math.PI,M=new Float32Array(LS+TS),H=new Float32Array(LS+TS);
+var PD=[[233.08,293.66,349.23],[233.08,311.13,392],[220,261.63,349.23],[233.08,293.66,349.23],[233.08,293.66,392],[233.08,311.13,392],[220,261.63,349.23],[220,261.63,349.23]];
+var BS=[[116.54,174.61],[155.56,116.54],[87.31,130.81],[116.54,174.61],[98,146.83],[155.56,116.54],[87.31,130.81],[87.31,130.81]];
+var ML=[[[0,466.16,1],[1,587.33,1],[2,698.46,2]],[[0,622.25,1.5],[1.5,587.33,.5],[2,523.25,1],[3,466.16,1]],[[0,440,1],[1,523.25,1],[2,698.46,1.5],[3.5,587.33,.5]],[[0,587.33,1.5],[1.5,523.25,.5],[2,466.16,2]],
+[[0,783.99,1.5],[1.5,698.46,.5],[2,587.33,1],[3,466.16,1]],[[0,622.25,1],[1,783.99,1],[2,932.33,1.5],[3.5,783.99,.5]],[[0,523.25,.75],[.75,587.33,.25],[1,622.25,1],[2,587.33,1],[3,523.25,1]],[[0,440,1],[1,523.25,1],[2,698.46,2]]];
+var ST=new Float32Array(4096),q;for(q=0;q<4096;q++)ST[q]=Math.sin(TWO*q/4096);function sn(x){x-=Math.floor(x);return ST[(x*4096)|0]}
+var PW=[0,1,.354,.192,.125];
+var WC={};
+function wt(key,K,bw,pw){if(WC[key])return WC[key];var T=new Float32Array(2048),j,k,w=[];for(k=1;k<=K;k++)w[k]=pw?pw[k]:Math.exp(-k/bw)/Math.pow(k,.6);
+for(j=0;j<2048;j++){var v=0;for(k=1;k<=K;k++)v+=w[k]*ST[(2*j*k)&4095];T[j]=v}return WC[key]=T}
+function horn(f,t,d,am){am=am||1;var n=Math.round((d+.5)*SR),s0=Math.round(t*SR),K=Math.min(14,Math.floor(5000/f)),p1=0,p2=0,i,D=wt('hd'+f,K,2.5),R=wt('hb'+f,K,6.5);
+for(i=0;i<n&&s0+i<H.length;i++){var tt=i/SR,a=1-Math.exp(-tt/.03),r=tt>d?Math.exp(-(tt-d)/.1):1,vb=f*(1+.004*sn(5.2*tt)*Math.min(tt/.3,1))/SR,m=Math.min(tt/.12,1);
+p1+=vb*.997;p2+=vb*1.003;if(p1>=1)p1-=1;if(p2>=1)p2-=1;var x1=(p1*2048)|0,x2=(p2*2048)|0;
+H[s0+i]+=((1-m)*(D[x1]+D[x2])+m*(R[x1]+R[x2]))*a*r*.06*am}}
+function pad(f,t,d){var n=Math.round((d+.6)*SR),s0=Math.round(t*SR),p1=0,p2=0,i,P=wt('p',4,0,PW),i1=f*.996/SR,i2=f*1.004/SR;
+for(i=0;i<n&&s0+i<M.length;i++){var tt=i/SR,a=Math.min(tt/.5,1),r=tt>d?Math.max(0,1-(tt-d)/.6):1;p1+=i1;p2+=i2;if(p1>=1)p1-=1;if(p2>=1)p2-=1;
+M[s0+i]+=(P[(p1*2048)|0]+P[(p2*2048)|0])*a*r*.012}}
+function bass(f,t,d){var n=Math.round((d+.3)*SR),s0=Math.round(t*SR),p=0,i;
+for(i=0;i<n&&s0+i<M.length;i++){var tt=i/SR,e=Math.min(tt/.02,1)*(.35+.65*Math.exp(-tt/.5))*(tt>d?Math.exp(-(tt-d)/.08):1);p+=f/SR;
+M[s0+i]+=(sn(p)+.6*sn(2*p)+.35*sn(3*p)+.2*sn(4*p))*e*.1}}
+function timp(t,v){var n=Math.round(.8*SR),s0=Math.round(t*SR),p=0,i;
+for(i=0;i<n&&s0+i<M.length;i++){var tt=i/SR;p+=(65+75*Math.exp(-tt/.09))/SR;M[s0+i]+=sn(p)*Math.exp(-tt/.2)*v}}
+function snare(t,v){var n=Math.round(.15*SR),s0=Math.round(t*SR),pn=0,i;
+for(i=0;i<n&&s0+i<M.length;i++){var tt=i/SR,x=Math.random()*2-1,y=x-pn;pn=x;M[s0+i]+=(y*Math.exp(-tt/.035)*.5+sn(190*tt)*Math.exp(-tt/.05)*.3)*v}}
+function crash(t,v){var n=Math.round(.9*SR),s0=Math.round(t*SR),p1=0,p2=0,i;
+for(i=0;i<n&&s0+i<M.length;i++){var tt=i/SR,x=Math.random()*2-1,y=x-p1;p1=x;var z=y-p2;p2=y;M[s0+i]+=z*Math.exp(-tt/.3)*v}}
+function sched(i){var t=i*4*B,j;PD[i].forEach(function(f){pad(f,t,4*B)});bass(BS[i][0],t,.8*B);bass(BS[i][1],t+2*B,.8*B);
+[1,3].forEach(function(b){PD[i].forEach(function(f){horn(f,t+b*B,.4*B,.45)})});
+ML[i].forEach(function(n){horn(n[1],t+n[0]*B,n[2]*B*.92,1);horn(n[1]/2,t+n[0]*B,n[2]*B*.92,.5)});
+timp(t,.4);timp(t+2*B,.3);for(j=0;j<8;j++)snare(t+j*.5*B,j%4==2?.11:.045);
+if(i==7)for(j=0;j<8;j++)snare(t+3*B+j*.125*B,.03+.012*j);if(i==0||i==4)crash(t,.05)}
+function fin(){var D=Math.round(.75*B*SR),E=new Float32Array(H.length),i,pk=0,o=new Float32Array(LS);
+for(i=D;i<H.length;i++)E[i]=.3*(H[i-D]+E[i-D]);
+for(i=0;i<LS;i++){var x=M[i]+H[i]+.8*E[i];if(i<TS)x+=M[LS+i]+H[LS+i]+.8*E[LS+i];x=Math.tanh(x*1.8);o[i]=x;if(Math.abs(x)>pk)pk=Math.abs(x)}
+var g=pk?.85/pk:1;for(i=0;i<LS;i++)o[i]*=g;done(o)}
+var bar=0;(function step(){sched(bar++);if(bar<BARS)setTimeout(step,0);else fin()})();
+}
+
+function say(m,keep){if(!tb){tb=document.createElement('div');tb.style.cssText='position:fixed;left:16px;right:84px;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:70;font-size:12px;line-height:1.4;color:#f7e3a1;background:rgba(12,4,5,.85);border:1px solid rgba(232,193,90,.4);border-radius:12px;padding:8px 12px;pointer-events:none;transition:opacity .4s;opacity:0';document.body.appendChild(tb)}
+tb.textContent=m;tb.style.opacity=m?1:0;clearTimeout(say.h);if(m&&!keep)say.h=setTimeout(function(){tb.style.opacity=0},6000)}
+addEventListener('error',function(e){say('Lỗi: '+(e.message||'không rõ'),1)});
+function wavURL(f,cb){var n=f.length,b=new ArrayBuffer(44+n*2),v=new DataView(b);function w(o,x){for(var k=0;k<x.length;k++)v.setUint8(o+k,x.charCodeAt(k))}
+w(0,'RIFF');v.setUint32(4,36+n*2,true);w(8,'WAVE');w(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,SR,true);v.setUint32(28,SR*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);w(36,'data');v.setUint32(40,n*2,true);
+for(var k=0;k<n;k++){v.setInt16(44+k*2,Math.max(-1,Math.min(1,f[k]))*32767,true)}
+cb(URL.createObjectURL(new Blob([b],{type:'audio/wav'})))}
+function setUI(v,u){if(v)openGate();mu.classList.toggle('on',v);if(u)mu.classList.add('used');mu.setAttribute('aria-label',v?'Tắt nhạc nền':'Bật nhạc nền')}
+function setAS(){try{if(navigator.audioSession)navigator.audioSession.type='playback'}catch(e){}}
+function prime(){try{var AC=window.AudioContext||window.webkitAudioContext;if(!actx&&AC)actx=new AC();if(actx)actx.resume()}catch(e){}}
+function off(){GE.forEach(function(t){document.removeEventListener(t,g1)})}
+function startWA(){try{if(!PCM||!actx)throw new Error('không có Web Audio');
+if(!wsrc){var b=actx.createBuffer(1,PCM.length,SR);b.getChannelData(0).set(PCM);wsrc=actx.createBufferSource();wsrc.buffer=b;wsrc.loop=true;try{var ds=actx.createMediaStreamDestination();wsrc.connect(ds);wae=new Audio();wae.srcObject=ds.stream;wae.play().catch(function(){try{wsrc.disconnect();wsrc.connect(actx.destination)}catch(x){}})}catch(x){wsrc.connect(actx.destination)}wsrc.start(0)}
+actx.resume();usingWA=true;on=true;setUI(true,1);off();say('')}catch(e){on=false;setUI(false);say('Không phát được nhạc: '+(e.name||'')+' '+(e.message||''),1)}}
+function play(g){if(!ready)return;
+au.play().then(function(){usingWA=false;on=true;setUI(true,1);off();say('♪ Đang phát nhạc')})
+.catch(function(e){if(g)startWA();else{on=false;setUI(false);say('Chạm vào trang để bật nhạc')}})}
+function g1(e){if(manual||on||(e.target&&mu.contains(e.target)))return;openGate();prime();setAS();want=true;
+if(ready)play(true);else{on=true;setUI(true,1);say('Đang tạo nhạc, vài giây nữa sẽ phát…');if(sil){au.src=sil;au.play().catch(function(){})}}}
+GE.forEach(function(t){document.addEventListener(t,g1,{passive:true})});
+wavURL(new Float32Array(SR/5),function(u){sil=u});
+say('Đang tạo nhạc nền…');
+setTimeout(function(){fetch('nhac.mp3',{method:'HEAD'}).then(function(r){if(!r.ok)throw 0;au.src='nhac.mp3';ready=true;if(want)play(on)}).catch(function(){
+try{makeLoop(SR,function(o){PCM=o;wavURL(o,function(u){au.src=u;ready=true;if(want)play(on)})})}catch(e){say('Lỗi tạo nhạc: '+e.message,1)}})},300);
+mu.onclick=function(){manual=true;openGate();prime();setAS();
+if(on){stopAll();on=false;want=false;setUI(false,1);return}
+want=true;
+if(ready){if(usingWA){actx.resume();if(wae)wae.play().catch(function(){});on=true;setUI(true,1)}else play(true)}
+else{on=true;setUI(true,1);say('Đang tạo nhạc, vài giây nữa sẽ phát…');if(sil){au.src=sil;au.play().catch(function(){})}}};
+function stopAll(){try{au.pause()}catch(e){}try{if(wae)wae.pause()}catch(e){}try{if(actx&&actx.state==='running')actx.suspend()}catch(e){}}
+function killAll(){stopAll();try{au.removeAttribute('src');au.load()}catch(e){}try{if(wae){wae.srcObject=null}}catch(e){}try{if(actx&&actx.state!=='closed')actx.close()}catch(e){}}
+document.addEventListener('visibilitychange',function(){if(document.hidden){stopAll();return}
+if(!on)return;if(usingWA){try{actx.resume();if(wae)wae.play().catch(function(){})}catch(e){}}else au.play().catch(function(){})});
+addEventListener('pagehide',killAll);addEventListener('beforeunload',killAll);
+addEventListener('pageshow',function(e){if(e.persisted)location.reload()});
+})();
+</script>
+</body>
+</html>
